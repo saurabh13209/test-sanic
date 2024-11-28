@@ -4,7 +4,7 @@ from app.config import Config
 
 Config.load_config()
 
-app = Sanic(Config.get("APP_NAME"))
+app = Sanic(Config.get("APP_NAME", "DefaultApp"))
 
 # Accessing environment variables
 @app.get("/")
